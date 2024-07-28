@@ -1,0 +1,60 @@
+
+
+
+ <div class="container ">
+    <div class="get-data  ">
+        <div class="search">
+            <i class="fa-solid fa-location-dot"></i>
+            <input [(ngModel)]="searchTerm" type="text" placeholder="Search By Name">
+            <button>Search</button>
+        </div>
+        <div class="heading-data">
+            <span>POPULAR RENTAL DEALS</span>
+            <h3>Most popular cars rental deals</h3>
+        </div>
+    </div>
+
+
+ <div class="data">
+    <div class="row">
+        <div *ngFor="let car of cars | search:searchTerm"  class="col-md-6 col-xl-3 col-lg-4 g-4">
+            <div class="card">
+           
+                    <img src="assets/images/Audi 1.png" class="w-100" alt="cars">
+             
+                 
+                <h5>{{car.make}} {{car.model}}</h5>
+                <p><i class="fa-solid fa-star"></i> 4.8 <span>(2424 reviews)</span></p>
+                <div class="row pb-4 icon">
+                    <div class="col-6 detel  pb-3">
+                        <i class="fa-regular fa-user"></i>
+                        <span>4 Passagers</span>
+                    </div>
+                    <div class="col-6 detel pb-3">
+                       <img src="assets/images/o2DSev.tif_1_.png" alt="icon">
+                        <span>{{car.transmission}}</span>
+                    </div>
+                    <div class="col-6 detel  pb-3 ">
+                         <img src="assets/images/d8wxke_2_.png" alt="icon">
+                        <span>Air Conditioning</span>
+                    </div>
+                    <div class="col-6 detel  pb-3">
+                        <i class="fa-solid fa-calendar-days text-black"></i>
+                        <span>{{car.year}}</span>
+                    </div>
+                </div>
+
+                <div class="price">
+                    <p class="my-0">Price</p>
+                    <p class="my-0"> <span>${{car.price}} </span> /day</p>
+                </div>
+
+                <button [routerLink]="['/details' , car.id]">View details<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+ <div class="show-all">
+    <button routerLink="/cars" class="btn">Show all vehicles <i class="fa-solid fa-arrow-right"></i></button>
+ </div>
+ </div>
+</div>

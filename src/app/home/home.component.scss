@@ -1,0 +1,57 @@
+.landing{
+    height: 100vh;
+    background-image: url(/assets/images/Frame.png);
+    background-repeat: no-repeat;
+    background-position-x:right ;
+    background-size:contain;
+    overflow: hidden;
+}
+
+.landing-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 7%;
+  
+}
+
+.landing-content h1 span{
+    color: #1572D3;
+    font-family: Poppins;
+font-size: 48px;
+font-weight: 600;
+line-height: 48px;
+text-align: left;
+
+}
+.landing-content h1{
+    font-family: Poppins;
+font-size: 48px;
+font-weight: 600;
+line-height: 48px;
+text-align: left;
+margin-top: 40px;
+
+}
+.landing-content .vector{
+    position: relative;
+}
+.landing-content .vector img{
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+}
+.landing-content p{
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+text-align: left;
+padding: 15px 0;
+
+}
+.row{
+    --bs-gutter-x: 0;
+ 
+}
